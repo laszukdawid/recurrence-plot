@@ -20,4 +20,4 @@ Few inspirational plots below.
 Small blog post on using visualising Intrinsic Mode Frequency (IMFs), i.e. output of Empirical Mode Decomposition, can be found here: [EMD on Audio wav and reccurance plots](https://laszukdawid.com/2015/09/04/emd-on-audio-wav-and-recurrance-plots/)
 
 # Cool-looking plots
-![example]:(examples/chainsaw/images/chainsaw_imfR_3.png?raw=true "Reccurance plot of an IMF")
+![example](examples/chainsaw/images/chainsaw_imfR_3.png?raw=true "Reccurance plot of an IMF")
