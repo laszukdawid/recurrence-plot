@@ -3,15 +3,15 @@
 from __future__ import division, print_function
 import numpy as np
 import pylab as plt
+from scipy.spatial.distance import pdist, squareform
 
 def rec_plot(s, eps=None, steps=None):
     if eps==None: eps=0.10
     if steps==None: steps=10
-    N = s.size
-    S = np.repeat(s[None,:], N, axis=0)
-    Z = np.floor(np.abs(S-S.T)/eps)
-    Z[Z>steps] = steps
-
+    d = pdist(s[:,None])
+    d = np.floor(d/eps)
+    d[d>steps] = steps
+    Z = squareform(d)
     return Z
 
 def moving_average(s, r=None):
