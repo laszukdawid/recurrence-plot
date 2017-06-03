@@ -5,17 +5,14 @@ import numpy as np
 import pylab as plt
 from scipy.spatial.distance import pdist, squareform
 
-def rec_plot(s, eps=None, steps=None):
-    if eps==None: eps=0.10
-    if steps==None: steps=10
+def rec_plot(s, eps=0.10, steps=10):
     d = pdist(s[:,None])
     d = np.floor(d/eps)
     d[d>steps] = steps
     Z = squareform(d)
     return Z
 
-def moving_average(s, r=None):
-    if r==None: r=5
+def moving_average(s, r=5):
     return np.convolve(s, np.ones((r,))/r, mode='valid')
 
 if __name__ == "__main__":
